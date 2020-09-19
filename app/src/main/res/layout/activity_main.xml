@@ -18,13 +18,23 @@
         android:textStyle="italic"/>
 
     <EditText
+        android:id="@+id/userid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:hint="ID"
+        android:layout_marginTop="30dp"
+        android:enabled="false"/>
+
+    <EditText
         android:id="@+id/firstname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textColor="@android:color/black"
         android:hint="First name"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:id="@+id/lastname"
@@ -57,6 +67,62 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Save into SQLite"
-        android:backgroundTint="@color/colorAccent"/>
+        android:backgroundTint="@color/colorAccent"
+        android:layout_marginTop="40dp"
+        android:onClick="submitData"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/searchuserbyid"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:hint="User ID" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search User"
+            android:backgroundTint="@color/colorAccent"
+            android:onClick="searchUser"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/deleteuserbyid"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:hint="User ID" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete User"
+            android:backgroundTint="@color/colorAccent"
+            android:onClick="deleteUser"/>
+
+    </LinearLayout>
 
 </LinearLayout>
